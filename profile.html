@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EventHub | Profile</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f7fb;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.profile-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.profile-card{
+
+    width:420px;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.profile-card img{
+
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    display:block;
+    margin:auto;
+    object-fit:cover;
+
+}
+
+.profile-card h1{
+
+    text-align:center;
+    margin:20px 0;
+
+}
+
+.info{
+
+    margin:20px 0;
+
+}
+
+.info p{
+
+    margin:15px 0;
+    font-size:18px;
+
+}
+
+.logout{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#dc2626;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+
+}
+
+.logout:hover{
+
+    background:#b91c1c;
+
+}
+
+.home{
+
+display:block;
+text-align:center;
+margin-top:20px;
+text-decoration:none;
+color:#2563eb;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="profile-section">
+
+<div class="profile-card">
+
+<img src="images/profile.png">
+
+<h1>
+
+My Profile
+
+</h1>
+
+<div class="info">
+
+<p>
+
+<b>Name :</b>
+
+<span id="name"></span>
+
+</p>
+
+<p>
+
+<b>Mobile :</b>
+
+<span id="mobile"></span>
+
+</p>
+
+</div>
+
+<button
+class="logout"
+onclick="logout()">
+
+Logout
+
+</button>
+
+<a
+href="index.html"
+class="home">
+
+⬅ Home
+
+</a>
+
+</div>
+
+</section>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

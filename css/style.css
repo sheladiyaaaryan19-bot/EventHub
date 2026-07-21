@@ -1,0 +1,393 @@
+/* ===============================
+   EventHub Premium CSS
+   Part 1
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(18,18,18,.85);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:32px;
+    color:#fff;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ff9800;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:30px;
+}
+
+.nav-links li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links li a:hover{
+    color:#ff9800;
+}
+
+/* Hero Section */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("../images/bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero-content h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:35px;
+    line-height:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+    font-size:18px;
+}
+
+.btn:hover{
+    background:#ff7700;
+    transform:translateY(-5px);
+}
+
+/* Featured */
+
+.featured{
+    padding:90px 8%;
+}
+
+.featured h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.event-container{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.event-card{
+    width:340px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.event-card:hover{
+    transform:translateY(-12px);
+}
+
+.event-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.event-card h3{
+    margin:20px;
+}
+
+.event-card p{
+    margin:0 20px 20px;
+    color:#666;
+}
+
+.btn-small{
+    display:inline-block;
+    margin:0 20px 25px;
+    padding:10px 20px;
+    background:#0d6efd;
+    color:white;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+.btn-small:hover{
+    background:#084298;
+}
+/* ===============================
+   Why Choose Us Section
+================================= */
+
+.why-us{
+    padding:90px 8%;
+    background:#eef4ff;
+}
+
+.why-us h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.why-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.why-card{
+    width:260px;
+    background:#fff;
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.why-card i{
+    font-size:50px;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+    line-height:26px;
+}
+
+/* ===============================
+   Statistics Section
+================================= */
+
+.stats{
+    background:#0d6efd;
+    color:white;
+    padding:70px 8%;
+}
+
+.stats-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.stat-box{
+    margin:20px;
+}
+
+.stat-box h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    font-size:18px;
+}
+
+/* ===============================
+   Footer
+================================= */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:50px 8%;
+    text-align:center;
+}
+
+footer h2{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#bbb;
+    line-height:28px;
+}
+
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-block;
+    width:45px;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    background:#1f2937;
+    color:white;
+    border-radius:50%;
+    margin:0 8px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#ff9800;
+}
+
+/* ===============================
+   Responsive
+================================= */
+
+@media(max-width:992px){
+
+.hero-content h1{
+    font-size:48px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.nav-links li{
+    margin:10px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+    height:auto;
+    padding:150px 20px 100px;
+}
+
+.hero-content h1{
+    font-size:36px;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:28px;
+}
+
+.event-card{
+    width:100%;
+}
+
+.featured h2,
+.why-us h2{
+    font-size:32px;
+}
+
+.stat-box h2{
+    font-size:36px;
+}
+
+.stat-box{
+    width:45%;
+    margin-bottom:30px;
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+    font-size:26px;
+}
+
+.hero-content h1{
+    font-size:30px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.btn{
+    padding:12px 25px;
+    font-size:16px;
+}
+
+.stat-box{
+    width:100%;
+}
+
+}

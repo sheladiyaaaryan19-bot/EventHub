@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EventHub | My Tickets</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f7fb;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:100px auto;
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:40px;
+}
+
+.ticket-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+
+}
+
+.ticket{
+
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    border-left:6px solid #2563eb;
+
+}
+
+.ticket h2{
+
+    margin-bottom:15px;
+
+}
+
+.ticket p{
+
+    margin:10px 0;
+    color:#555;
+
+}
+
+.cancel{
+
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#dc2626;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+.cancel:hover{
+
+    background:#b91c1c;
+
+}
+
+.back{
+
+display:inline-block;
+margin-bottom:30px;
+padding:12px 25px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+
+}
+
+.empty{
+
+text-align:center;
+font-size:22px;
+color:#666;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="events.html" class="back">
+
+⬅ Back to Events
+
+</a>
+
+<h1>
+
+🎟 My Tickets
+
+</h1>
+
+<div
+id="ticketContainer"
+class="ticket-grid">
+
+</div>
+
+</div>
+
+<script src="js/tickets.js"></script>
+
+</body>
+
+</html>
