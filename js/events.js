@@ -1,67 +1,42 @@
-// ===============================
-// EventHub Events JavaScript
-// ===============================
+const favButtons = document.querySelectorAll(".fav");
 
-// Search Events
-const search = document.getElementById("search");
+favButtons.forEach(button=>{
 
-search.addEventListener("keyup", function () {
+    button.addEventListener("click",function(){
 
-    let filter = search.value.toLowerCase();
+        const eventCard = this.closest(".event");
 
-    let events = document.querySelectorAll(".event");
+        const eventName = eventCard.querySelector("h2").innerText;
 
-    events.forEach(function (card) {
+        let favorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
 
-        let title = card.querySelector("h2").innerText.toLowerCase();
+        if(!favorites.some(f => f.name === eventName)){
 
-        if (title.includes(filter)) {
+            const event = {
 
-            card.style.display = "block";
+                name: eventCard.querySelector("h2").innerText,
 
-        } else {
+                location: eventCard.querySelectorAll("p")[0].innerText,
 
-            card.style.display = "none";
+                price: eventCard.querySelector(".price").innerText
+
+            };
+
+            favorites.push(event);
+
+            localStorage.setItem(
+                "favorites",
+                JSON.stringify(favorites)
+            );
+
+            alert(eventName + " added to Favorites ❤️");
+
+        }else{
+
+            alert("Already in Favorites");
 
         }
-
-    });
-
-});
-
-// Book Now Buttons
-
-const bookButtons = document.querySelectorAll(".book");
-
-bookButtons.forEach(function(button){
-
-    button.addEventListener("click", function(){
-
-        let eventCard = this.parentElement.parentElement;
-
-        let ticket = {
-
-            name: eventCard.querySelector("h2").innerText,
-            location: eventCard.querySelectorAll("p")[0].innerText,
-            date: eventCard.querySelectorAll("p")[1].innerText,
-            price: eventCard.querySelector(".price").innerText
-
-        };
-
-        let tickets =
-            JSON.parse(localStorage.getItem("tickets")) || [];
-
-        tickets.push(ticket);
-
-        localStorage.setItem(
-
-            "tickets",
-
-            JSON.stringify(tickets)
-
-        );
-
-        alert("🎉 Ticket Booked Successfully!");
 
     });
 
