@@ -611,3 +611,28 @@ footer p{
     background:#1747b8;
 
 }
+/* ===========================
+   Toast Notification
+=========================== */
+
+.toast{
+    position:fixed;
+    top:90px;
+    right:30px;
+    background:#16a34a;
+    color:#fff;
+    padding:15px 25px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    opacity:0;
+    transform:translateX(100%);
+    transition:.4s ease;
+    z-index:9999;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateX(0);
+}

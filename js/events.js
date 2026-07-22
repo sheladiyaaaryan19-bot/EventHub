@@ -30,14 +30,28 @@ favButtons.forEach(button=>{
                 JSON.stringify(favorites)
             );
 
-            alert(eventName + " added to Favorites ❤️");
+           showToast("❤️ " + eventName + " added to Favorites");
 
         }else{
 
-            alert("Already in Favorites");
-
+           showToast("⭐ Already in Favorites");
         }
 
     });
 
 });
+function showToast(message){
+
+    const toast = document.getElementById("toast");
+
+    toast.innerHTML = message;
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },2500);
+
+}
